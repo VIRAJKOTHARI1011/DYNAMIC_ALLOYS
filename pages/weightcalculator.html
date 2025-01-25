@@ -124,6 +124,51 @@
             color: #003366;
             font-weight: bold;
         }
+        /* General Responsive CSS for small devices */
+@media screen and (max-width: 768px) {
+    /* Adjust the calculator container */
+    .calculator, .results {
+        max-width: 95%; /* Take almost the full width of the screen */
+        margin: 10px auto; /* Add some spacing from the screen edges */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    /* Adjust text and form elements */
+    h1, h2 {
+        font-size: 1.5rem; /* Smaller headings for mobile screens */
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    select, input {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px 15px; /* Reduce button padding */
+    }
+
+    .btn-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Add spacing between buttons */
+    }
+}
+
+/* Specific adjustments for smaller iPhone models */
+@media screen and (max-width: 375px) {
+    .calculator, .results {
+        padding: 15px; /* Reduce padding even more */
+    }
+
+    button {
+        padding: 8px 12px; /* Smaller buttons for tiny screens */
+        font-size: 0.85rem;
+    }
+}
+
     </style>
 </head>
 <body class="index-page">

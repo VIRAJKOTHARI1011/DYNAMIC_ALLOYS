@@ -1,11 +1,14 @@
 # Enable mod_rewrite
-RewriteEngine on
+RewriteEngine On
 
-# Check if the request is NOT for a directory
+# Check if the requested URL is NOT a directory
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# Check if a file with .html extension exists
+# Check if the requested URL is NOT a file
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Check if the file with .html extension exists
 RewriteCond %{REQUEST_FILENAME}.html -f
 
-# Rewrite the URL to the .html file
+# Rewrite the URL to point to the .html file
 RewriteRule ^(.*)$ $1.html [NC,L]
